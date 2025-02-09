@@ -30,11 +30,13 @@ function App() {
 
   return (
     <div className="App">
-      <label className="custom-file-upload">
-        <input type="file" accept=".csv" onChange={fileUpload} hidden />
-        Choose CSV File
-      </label>
-      <Scatterplot data={data}></Scatterplot>
+      <div className="file-upload-container">
+        <label className="custom-file-upload">
+          <input type="file" accept=".csv" onChange={fileUpload} hidden />
+          Choose CSV File
+        </label>
+      </div>
+      <Scatterplot data={data} />
     </div>
   );
 }
